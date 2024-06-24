@@ -71,7 +71,7 @@ export class FilteredResultsComponent implements OnInit {
     };
 
     // this.http.post<any>('http://localhost:5000/jobs', jobData).subscribe(
-    this.http.post<any>('https://mydreamuniversity.in/jobs', jobData).subscribe(
+    this.http.post<any>('https://backend.mydreamuniversity.in/jobs', jobData).subscribe(
       (response: any) => {
         if (response) {
           const jobs = JSON.parse(response);
