@@ -69,7 +69,7 @@ export class CourseResultsComponent implements OnInit {
   fetchRelatedCourses(formData: FormData) {
     
     // this.http.post<any>('http://localhost:5000/related-courses', formData)
-    this.http.post<any>('https://mydreamuniversity.in/related-courses', formData)
+    this.http.post<any>('https://backend.mydreamuniversity.in/related-courses', formData)
       .subscribe(
         (response: HttpResponse<any>) => {
           console.log('Related courses:', response);
@@ -124,7 +124,7 @@ export class CourseResultsComponent implements OnInit {
     };
 
     // this.http.post<any>('http://localhost:5000/jobs',jobData).subscribe((response: any) => {
-      this.http.post<any>('https://mydreamuniversity.in/jobs',jobData).subscribe((response: any) => {
+      this.http.post<any>('https://backend.mydreamuniversity.in/jobs',jobData).subscribe((response: any) => {
           if (response) {
             const jobs = JSON.parse(response);
             this.jobsData = jobs.filter((job: any) => job.jobTitle);
@@ -159,7 +159,7 @@ export class CourseResultsComponent implements OnInit {
     };
     
     // this.http.post<any>('http://localhost:5000/filter', filterData).subscribe(
-    this.http.post<any>('https://mydreamuniversity.in/filter', filterData).subscribe(
+    this.http.post<any>('https://backend.mydreamuniversity.in/filter', filterData).subscribe(
       
       (response: any) => {
         console.log('Filtered results:', response);
