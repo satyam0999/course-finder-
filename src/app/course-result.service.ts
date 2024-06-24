@@ -8,7 +8,7 @@ import { map } from 'rxjs';
 })
 export class CourseResultService {
 
-  baseUrl:string = "https://mydreamuniversity.in/"
+  baseUrl:string = "https://backend.mydreamuniversity.in/"
 
 
   constructor(private HttpClient: HttpClient) { }
@@ -25,7 +25,7 @@ export class CourseResultService {
   }
   
   getCourses(formData: any) {
-    return this.HttpClient.post<any>('https://mydreamuniversity.in/', formData); // Replace URL
+    return this.HttpClient.post<any>('https://backend.mydreamuniversity.in/', formData); // Replace URL
   }
 
 
