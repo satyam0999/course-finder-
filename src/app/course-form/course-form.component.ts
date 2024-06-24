@@ -16,7 +16,7 @@ export class CourseFormComponent implements OnInit {
   courseResults: any;
 
   // private apiUrl = 'http://localhost:5000/'; 
-  private apiUrl = 'https://mydreamuniversity.in/'
+  private apiUrl = 'https://backend.mydreamuniversity.in/'
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.angForm = this.fb.group({
